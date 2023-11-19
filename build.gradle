@@ -130,6 +130,11 @@ spotless {
         indentWithSpaces()
         endWithNewline()
     }
+    json {
+        target '**/*.json'
+        targetExclude 'build/**'
+        gson()
+    }
     java {
         targetExclude 'build/**'
         googleJavaFormat().aosp()
